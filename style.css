@@ -1,0 +1,290 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7f6;
+    color: #26352e;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Área principal */
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+h2 {
+    color: #285b45;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+h3 {
+    color: #285b45;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #e2eee7;
+    color: #234b38;
+    text-align: center;
+    padding: 45px 15px;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+/* Menu */
+nav {
+    background-color: #315d48;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Introdução */
+.introducao {
+    text-align: center;
+}
+
+.descricao-secao {
+    margin-bottom: 25px;
+}
+
+/* Grade de livros */
+.livros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* Card do livro */
+.card-livro {
+    background-color: white;
+    border: 1px solid #d4dfd8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Capas ilustrativas */
+.capa {
+    min-height: 180px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #ffffff;
+    gap: 10px;
+}
+
+.capa span {
+    font-size: 48px;
+}
+
+.capa strong {
+    font-size: 19px;
+}
+
+/* Cores das capas */
+.capa-tecnologia {
+    background-color: #315b79;
+}
+
+.capa-literatura {
+    background-color: #79516f;
+}
+
+.capa-ciencias {
+    background-color: #39765c;
+}
+
+.capa-matematica {
+    background-color: #8b6930;
+}
+
+.capa-historia {
+    background-color: #755b46;
+}
+
+.capa-desenvolvimento {
+    background-color: #477568;
+}
+
+/* Conteúdo dos livros */
+.conteudo-livro {
+    padding: 20px;
+}
+
+.conteudo-livro h3 {
+    font-size: 20px;
+}
+
+/* Botões */
+.botao {
+    display: inline-block;
+    background-color: #315d48;
+    color: white;
+
+    padding: 11px 20px;
+    margin-top: 12px;
+
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #234333;
+    text-decoration: underline;
+}
+
+/* Categorias */
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.categoria {
+    background-color: white;
+    border: 1px solid #d4dfd8;
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+}
+
+.categoria span {
+    font-size: 35px;
+}
+
+.categoria h3 {
+    margin-top: 8px;
+}
+
+/* Detalhes dos livros */
+.detalhe-livro {
+    background-color: white;
+    border-left: 5px solid #548268;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    scroll-margin-top: 20px;
+}
+
+/* Sobre */
+.sobre {
+    background-color: #e2eee7;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+/* Foco de acessibilidade */
+a:focus-visible {
+    outline: 3px solid #e2a52d;
+    outline-offset: 4px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #315d48;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Tablets */
+@media (max-width: 850px) {
+    .livros,
+    .categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .livros,
+    .categorias {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .sobre {
+        padding: 22px;
+    }
+
+    .botao {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Respeita a preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
